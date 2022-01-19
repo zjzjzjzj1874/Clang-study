@@ -17,11 +17,11 @@ OBJS := $(patsubst %.c, %.o, $(SOURCES))
 all : $(EXEC)
 
 $(EXEC) : $(OBJS)
-    # $(ECHO) link $@
+    # $(ECHO) Linking: $@
 	$(CC) -o $@ $^
 
 %.o : %.c
-    # $(ECHO) compile $@
+    # $(ECHO) Compiling: $@
 	$(CC) $(CFLAGS) -o $@ -c $<
 
 clean:
