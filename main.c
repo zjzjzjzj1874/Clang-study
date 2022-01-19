@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdarg.h>
 #include "src/base/func.h"
 
 void increament(int *p)
@@ -32,6 +33,10 @@ int main()
     int a = plus_one(5);
     printf("plus_one result is %d\n", a);
 
-    size_t n = 10;
-    for (int i = 0; i < n; i++) {}
+    // size_t n = 10;
+    // for (int i = 0; i < n; i++) {}
+
+
+    simple_printf("dcff", 3, 'a', 1.999, 42.5); 
+
 }
