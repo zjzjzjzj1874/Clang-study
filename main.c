@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "src/base/func.h"
 
 void increament(int *p)
 {
@@ -7,7 +8,7 @@ void increament(int *p)
 
 int main()
 {
-    printf("hello world\n");
+    // printf("hello world\n");
     // printf("Hello, World!\n");
 
 
@@ -20,12 +21,18 @@ int main()
     // printf("%zd\n", sizeof(0.3));
     // printf("%zd\n", sizeof(float));
     
-    int x = 1;
-    printf("x addr is %p\n", &x);
+    // int x = 1;
+    // printf("x addr is %p\n", &x);
     
-    increament(&x);
-    printf("x is %d\n", x);
+    // increament(&x);
+    // printf("x is %d\n", x);
     
     // 指针变量的初始化
     // int* p = NULL;
+
+    int a = plus_one(5);
+    printf("plus_one result is %d\n", a);
+
+    size_t n = 10;
+    for (int i = 0; i < n; i++) {}
 }
