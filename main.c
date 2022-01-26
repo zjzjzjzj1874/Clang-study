@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdarg.h>
-#include "src/base/func.h"
+// #include "src/base/func.h" // C语言中引用其他模块的函数
+#include "src/base/ptr.h" // C语言中引用其他模块的函数
 
 void increament(int *p)
 {
@@ -30,13 +31,20 @@ int main()
     // 指针变量的初始化
     // int* p = NULL;
 
-    int a = plus_one(5);
-    printf("plus_one result is %d\n", a);
 
     // size_t n = 10;
     // for (int i = 0; i < n; i++) {}
 
 
-    simple_printf("dcff", 3, 'a', 1.999, 42.5); 
+    /*
+        // 调用其他模块中的函数 ==> 配合上面被注释的include头
+        int a = plus_one(5);
+        printf("plus_one result is %d\n", a);
+        simple_printf("dcff", 3, 'a', 1.999, 42.5); 
+    */
+
+
+   value_pass_test(); // C语言中值传递证明
+    
 
 }

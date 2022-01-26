@@ -9,6 +9,7 @@ CFLAGS += -Wall
 
 SOURCES := main.c
 SOURCES += src/base/func.c
+SOURCES += src/base/ptr.c
 
 EXEC := main
 
