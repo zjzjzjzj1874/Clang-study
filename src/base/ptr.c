@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include "ptr.h"
 // 指针是一个值，这个值代表一个内存地址，因此指针相当于指向某个内存地址的路标。
+// *表示取指针变量地址中的值；
+// &表示取变量所在的内存地址；
 
 /*
     // 指针的申明方式：
@@ -33,10 +35,48 @@ void swap(int a, int b)
 }
 void value_pass_test()
 {
-    int a = 10,b = 20;
+    int a = 10, b = 20;
     printf("swap before a:%d,b:%d\n", a, b);
-    swap(a,b);
+    swap(a, b);
     printf("swap after a:%d,b:%d\n", a, b);
 
+    // &取变量所在的内存地址
+    int x = 1;
+    printf("x addr is %p\n", &x);
+    printf("x value is %d\n", x);
+
+    // *表示取指针所在内存的值  C语言中指针类型初始化
+    int *y = NULL;
+    y = &x; // 少了这一段就会报：段违规
+    *y = 10;
+    printf("y value is %d\n", *y);
+    printf("x addr is %p\n", &x);
+    printf("x value is %d\n", x);
 }
 // endregion C语言中参数是值传递，而非指针(引用)传递
+
+// 指针运算：指针本质上是一个无符号整数，代表的是内存地址。可以进行运算，但是规则不是整数的运算规则
+void ptr_calculate()
+{
+    int a = 10, *pa = &a;
+    double b = 99.9, *pb = &b;
+    //最初的值
+    printf("&a=%#X, &b=%#X\n", &a, &b);
+    printf("pa=%#X, pb=%#X\n", pa, pb);
+    //加法运算
+    pa++;
+    pb++;
+    printf("加法运算：pa=%#X, pb=%#X\n", pa, pb);
+
+    //减法运算
+    pa -= 2;
+    pb -= 2;
+    printf("减法运算：pa=%#X, pb=%#X\n", pa, pb);
+
+    short *j;
+    j = (short *)0x1234;
+    j = j + 1; // 0x1236
+    printf("i=%x\n", j); // 输出16进制的整数
+    printf("i=%#x\n", j);// 输出带符号的16进制整数
+    printf("i=%#X\n", j);// 输出带符号的16进制整数
+}

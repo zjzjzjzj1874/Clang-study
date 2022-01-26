@@ -15,26 +15,24 @@ int main()
 
     // if (0.1 + 0.2 == 0.3)  printf("true\n"); // C语言中，01+02 != 0.3 请注意
     // else printf("false\n");
-    
+
     // // printf("0.1 + 0.2 = %f\n", 0.1 + 0.2);
-    
+
     // printf("%zd\n", sizeof(int));
     // printf("%zd\n", sizeof(0.3));
     // printf("%zd\n", sizeof(float));
-    
+
     // int x = 1;
     // printf("x addr is %p\n", &x);
-    
+
     // increament(&x);
     // printf("x is %d\n", x);
-    
+
     // 指针变量的初始化
     // int* p = NULL;
 
-
     // size_t n = 10;
     // for (int i = 0; i < n; i++) {}
-
 
     /*
         // 调用其他模块中的函数 ==> 配合上面被注释的include头
@@ -43,8 +41,6 @@ int main()
         simple_printf("dcff", 3, 'a', 1.999, 42.5); 
     */
 
-
-   value_pass_test(); // C语言中值传递证明
-    
-
+    // value_pass_test(); // C语言中值传递证明
+    ptr_calculate(); // 指针运算
 }
