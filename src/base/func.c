@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <stdarg.h>
 #include "func.h"
- 
- // 可变参数函数
+//  C语言约定，返回值0表示函数运行成功，如果返回其他非零整数，就表示运行失败
 
+// 可变参数函数
 // 定义于头文件 <stdarg.h>
 // (宏函数) va_start
 // 令函数得以访问可变参数
