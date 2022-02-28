@@ -42,5 +42,17 @@ int main()
     */
 
     // value_pass_test(); // C语言中值传递证明
-    ptr_calculate(); // 指针运算
+    // ptr_calculate(); // 指针运算
+
+    // 测试int的长度
+    short a = 10;
+    int b = 100;
+
+    int short_length = sizeof a;
+    int int_length = sizeof(b);
+    int i_l = sizeof(int);
+    int long_length = sizeof(long);
+    int char_length = sizeof(char);
+    printf("short length:%d,int length:%d,int length1:%d,long length:%d,char length:%d\n",
+           short_length, int_length, i_l, long_length, char_length);
 }
